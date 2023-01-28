@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+</head>
+<body>
+  <div class="row">
+  <div class="col-md-4 mx-auto rounded">
+    <div class="card bg-black text-white rounded">
+      <div class="card-header pt-5">
+        <h4 class="text-center">
+          Account Register
+        </h4>
+      </div>
+      <div class="card-body">
+        <form action="/auth/signup" method="POST">
+          <div class="mb-3">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              class="form-control bg-dark text-white"
+              name="name"
+              placeholder="Name"
+              value="{{name}}"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              class="form-control bg-dark text-white"
+              name="email"
+              placeholder="Email"
+              value="{{email}}"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="form-control bg-dark text-white"
+              name="password"
+              placeholder="Password"
+              value="{{password}}"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="confirm_password">Cofirmar Password:</label>
+            <input
+              type="password"
+              class="form-control bg-dark text-white"
+              name="confirm_password"
+              placeholder="Confirm Password"
+              value="{{confirm_password}}"
+            />
+          </div>
+          <button class="btn btn-success btn-block rounded-3">
+            Signup
+          </button>
+        </form>
+      </div>
+      <p class="text-center">Ya tienes una cuenta?
+        <a href="/src/views/auth/signin.hbs" class="text-info">Iniciar sesión</a></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
